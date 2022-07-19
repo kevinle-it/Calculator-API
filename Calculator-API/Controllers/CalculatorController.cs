@@ -29,6 +29,15 @@ namespace Calculator_API.Controllers
         {
             return calc.Add(left, right);
         }
+
+        // Create an API route for subtraction operation via HttpGet request
+        // with left and right query params specified on the HttpRequest URL
+        [HttpGet]
+        [Route("subtract/{left}/{right}")]
+        public double Subtract(double left, double right)
+        {
+            return calc.Subtract(left, right);
+        }
     }
 }
 

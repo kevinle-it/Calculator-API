@@ -38,6 +38,15 @@ namespace Calculator_API.Controllers
         {
             return calc.Subtract(left, right);
         }
+
+        // Create an API route for multiplication operation via HttpGet request
+        // with left and right query params specified on the HttpRequest URL
+        [HttpGet]
+        [Route("multiply/{left}/{right}")]
+        public double Multiply(double left, double right)
+        {
+            return calc.Multiply(left, right);
+        }
     }
 }
 
